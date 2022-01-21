@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML trainings</title>
+</head>
+
+<script>
+   
+   function onButtonClick() {
+    console.log('user clicked')       
+   }
+
+   function onTextboxValueChange() {
+       console.log('user typing something')
+   }
+
+</script>
+
+
+<body>
+
+    <div>
+        <label>Name</label>
+        <input on onchange="onTextboxValueChange()" value="Mani" type="text">
+    </div>
+    <div>
+        <label>Phone number</label>
+        <input on value="122222" type="number">
+    </div>
+
+    <div>
+        <label>Indian ?</label>
+        <input checked=true type="checkbox">
+    </div>
+    <div>
+        <label for="txt_password" >Password</label>
+        <input value="kjhkjhk" id="txt_password" type="password">
+    </div>
+    <div>
+        <label for=""> Gender</label>
+        <input checked=true type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> dont want to revile
+    </div>
+
+    <div>
+        <label for="">others</label>    
+        <textarea rows="3"></textarea>
+    </div>   
+
+    <button onclick="onButtonClick()">click me</button>
+
+
+
+</body>
+
+</html>
