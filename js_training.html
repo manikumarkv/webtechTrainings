@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form details</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<script>
+
+    function showAlert() {
+
+        var divElement = document.createElement("div");
+        divElement.innerText = 'Name: <FULL NAME>'
+
+        var paraElement = document.createElement('p')
+        paraElement.innerText = 'Address: <SOME ADDRESS>'
+
+        var labelElement = document.createElement('label')
+        labelElement.innerText = 'Contact Details: <Contact Details here>'
+
+        var targetElement = document.getElementById('target_element')
+
+
+        targetElement.append(divElement, paraElement, labelElement)
+
+    }
+
+    function displayData() {
+       // get infromation from text boxes
+
+       var nameElement = document.getElementById('txt_last_name');
+       var emailElement = document.getElementById('txt_email');
+
+       var nameValue = nameElement.value;
+       var emailValue = emailElement.value;
+
+       debugger
+       // create div elements with entered data
+
+       var nameViewElement = document.createElement('div');
+
+       if(nameValue.length > 0){
+        nameViewElement.innerText = 'Name is :' + nameValue;
+       } else {
+        nameViewElement.innerText = 'Name is : No Name Entered';
+       }
+       
+
+       var emailViewElement = document.createElement('div');
+       if(emailValue.length > 0) {
+        emailViewElement.innerText = 'Email is :' + emailValue;
+       } else {
+        emailViewElement.innerText = 'Email is : No Email Entered' ;
+       }
+       
+
+       
+       var targetElement = document.getElementById('data_view_ele');
+
+       // Clear if any previous data exists
+       targetElement.innerHTML = null
+
+       // append to the document(DOM)
+       targetElement.append(nameViewElement,emailViewElement);
+
+
+
+    }
+
+
+</script>
+
+<body>
+
+    <div>
+        <h1> Personal Details</h1>
+        <div id='target_element'></div>
+
+    </div>
+
+    <div style="width: 100px; 
+    height: 100px; border: 
+    1px solid skyblue; 
+    cursor: pointer;
+    border-radius: 5px;" onmouseover="showAlert()">
+        Show user details
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+       
+
+        <div>
+            <h1> User Form</h1>
+            <div class="form-group" style="width: 400px;">
+                <label for="exampleInputEmail1">Last Name</label>
+                <input type="text" class="form-control" id="txt_last_name" placeholder="Last Name">
+            </div>
+
+            <div class="form-group" style="width: 400px;">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="txt_email" placeholder="Email">
+            </div>
+
+            <div>
+                <button onclick="displayData()" class="btn btn-primary"> Display Data </button>
+            </div>
+
+            <div id='data_view_ele'>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
