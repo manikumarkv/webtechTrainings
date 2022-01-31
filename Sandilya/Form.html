@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+  .heading{
+    text-align: center;
+    color: greenyellow;
+  }
+  .requestmessage{
+    text-align: center;
+    color: black;
+  }
+</style>
+
+<script>
+  function submit(){
+    alert("Thank you for your time. Have a wonderful day!!");
+  }
+  
+  // function displayData() {
+  //      // get infromation from text boxes
+
+  //     //  var fname = document.getElementById('Fname').value;
+  //     // //  var lname = document.getElementById('Lname').value;
+  //     // //  var menu = document.getElementById("menu").value;
+  //     // //  var mail = document.getElementById('mail').value;
+  //     //  var phone = document.getElementById('Phone').value;
+  //     //  var info = document.getElementById('info').value;
+
+  //   }
+  function validateform(){
+    var fname = document.feedback.getElementById('Fname').value;
+    var phone = document.feedback.getElementById('Phone').value;
+    // console.log()
+    if (fname==null || fname==""){  
+      alert("Name can't be blank");  
+      return false;  
+      }else if(phone.length<10){  
+        alert("Incorrect number");  
+        return false; }  
+
+  }  
+</script>
+
+<html>
+  <div class="heading">
+    <h1>Feedback Form</Form>
+    
+  </div>
+  
+  <div class="requestmessage">
+    <h6>Please take 2 minutes of your valuable time to give us feedback. Your Feedback helps us serve better.</h6>
+  </div>
+
+  <div class="container" style="margin-top: 5%;">
+    <form name="feedback">    
+      <!- formvalidation is commented-->
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <input type="text" id="Fname" class="form-control" placeholder="First Name" />
+            <label class="form-label">First name</label>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="form-group">
+            <input type="text" id="Lname" class="form-control" placeholder="Last Name"/>
+            <label class="form-label">Last name (optional)</label>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Menu -->
+      <div class="form-group">
+        <input type="text" id="menu" class="form-control" />
+        <label class="form-label">Dishes ordered</label>
+      </div>
+    
+    
+      <!-- Email input -->
+      <div class="form-group">
+        <input type="email" id="mail" class="form-control" />
+        <label class="form-label">Email </label>
+      </div>
+      
+      <!-- Number input -->
+      <div class="form-group">
+        <input type="number" id="phone" class="form-control" />
+        <label class="form-label">Phone Number</label>
+      </div>
+      
+      <!-- Message input -->
+      <div class="form-group">
+        <textarea class="form-control" id="info" rows="2"></textarea>
+        <label class="form-label" >Any comments, questions or suggestions?
+        </label>
+      </div>
+<!--     
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <label class="form-label" >How would you rate our service?</label>
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-warning">Bad</button>
+          <button type="button" class="btn btn-info">poor</button>
+          <button type="button" class="btn btn-default">Average</button>
+          <button type="button" class="btn btn-primary">Good</button>
+          <button type="button" class="btn btn-success">Great</button>
+          
+        </div> <br>  -->
+      <div class="radio">
+        <label >How would you rate our overall service?</label>
+        <label class="radio-inline"><input type="radio" name="optradio" checked>Bad</label>
+        <label class="radio-inline"><input type="radio" name="optradio">Fine</label>
+        <label class="radio-inline"><input type="radio" name="optradio">Good</label>
+      </div>
+
+      <div class="btn-group-vertical" role="group">
+        <button onclick = "submit()" class="btn btn-primary btn-block mb-4">Submit</button>
+      </div>
+    </form>    
+
+      <!-- Submit button -->
+
+  
+  </div>
+  
+</html>
