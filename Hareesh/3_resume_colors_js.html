@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <title>
+        Molleti Hareesh
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="3_resume_colors.css">
+</head>
+
+<body class="body" id="body">
+    <div class="container">
+        <aside>
+            <img src="images/h.jpeg" alt="Profile Image">
+            <div class="profile">
+                <h3 id="profile">PROFILE</h3>
+                <div>Become an Artificial Intelligent</div>
+            </div>
+            <div class="personal_details">
+                <h3 id="personal_details">PERSONAL DETAILS</h3>
+                <div><b>DOB : </b>25-APR-1996</div>
+                <div><b>Nationality : </b>Indian</div>
+                <div><b>Location : </b>Visakhapatnam</div>
+                <div><b>Maretal Status : </b>Single</div>
+            </div>
+            <div class="contact">
+                <h3 id="contact_details">CONTACT DETAILS</h3>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-envelope"></i>
+                        <i class="fa fa-envelope fa-stack-1x icon"></i>
+                    </span>
+                    <div> m.hareesh2504@gmail.com</div>
+                </div>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-phone"></i>
+                        <i class="fa fa-phone fa-stack-1x icon"></i>
+                    </span>
+                    <div> +91 89858 84602</div>
+                </div>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-linkedin"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x icon"></i>
+                    </span>
+                    <div><a href="https://www.linkedin.com/in/heramba/">heramba</a></div>
+                </div>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-facebook"></i>
+                        <i class="fab fa-facebook-f fa-stack-1x icon"></i>
+                    </span>
+                    <div><a href="https://www.facebook.com/m.herambah">m.herambah</a></div>
+                </div>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-twitter"></i>
+                        <i class="fab fa-twitter fa-stack-1x icon"></i>
+                    </span>
+                    <div><a href="https://twitter.com/Heramba_Hareesh">Heramba_Hareesh</a></div>
+                </div>
+                <div class="contact_data">
+                    <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x icon-background" id="icon-instagram"></i>
+                        <i class="fab fa-instagram fa-stack-1x icon"></i>
+                    </span>
+                    <div><a href="https://www.instagram.com/hareesh_molleti/">hareesh_molleti</a></div>
+                </div>
+            </div>
+            <div class="colors">
+                <div class="color_picker" id="color_picker">
+                    Color_Picker
+                </div>
+                <div class="color_value">
+                    <span class="fa-stack" onclick="MediumSeaGreen()">
+                        <i class="fa fa-circle fa-stack-2x color-MediumSeaGreen"></i>
+                    </span>
+                    <span class="fa-stack" onclick="Tomato()">
+                        <i class="fa fa-circle fa-stack-2x color-Tomato"></i>
+                    </span>
+                    <span class="fa-stack" onclick="SlateBlue()">
+                        <i class="fa fa-circle fa-stack-2x color-SlateBlue"></i>
+                    </span>
+                    <span class="fa-stack" onclick="Orange()">
+                        <i class="fa fa-circle fa-stack-2x color-Orange"></i>
+                    </span>
+                    <span class="fa-stack" onclick="DodgerBlue()">
+                        <i class="fa fa-circle fa-stack-2x color-DodgerBlue"></i>
+                    </span>
+                    <span class="fa-stack" onclick="Violet()">
+                        <i class="fa fa-circle fa-stack-2x color-Violet"></i>
+                    </span>
+                </div>
+                <script>
+                    var active = document.getElementById("active");
+
+                    function changeColor(color) {
+                        document.getElementById("body").style.background = color;
+                        document.getElementById("main_heading").style.color = color;
+                        document.getElementById("profile").style.color = color;
+                        document.getElementById("personal_details").style.color = color;
+                        document.getElementById("contact_details").style.color = color;
+                        document.getElementById("color_picker").style.color = color;
+                        document.getElementById("icon-envelope").style.color = color;
+                        document.getElementById("icon-phone").style.color = color;
+                        document.getElementById("icon-linkedin").style.color = color;
+                        document.getElementById("icon-facebook").style.color = color;
+                        document.getElementById("icon-twitter").style.color = color;
+                        document.getElementById("icon-instagram").style.color = color;
+                        document.getElementById("work_exp").style.color = color;
+                        document.getElementById("work_exp1").style.color = color;
+                        document.getElementById("work_exp2").style.color = color;
+                        document.getElementById("education_qualification").style.color = color;
+                        document.getElementById("matric").style.color = color;
+                        document.getElementById("under_graduation").style.color = color;
+                        document.getElementById("graduation").style.color = color;
+                    }
+
+                    function MediumSeaGreen() {
+                        changeColor('MediumSeaGreen');
+                    }
+                    function Tomato() {
+                        changeColor('Tomato');
+                    }
+                    function SlateBlue() {
+                        changeColor('SlateBlue');
+                    }
+                    function Orange() {
+                        changeColor('Orange');
+                    }
+                    function DodgerBlue() {
+                        changeColor('DodgerBlue');
+                    }
+                    function Violet() {
+                        changeColor('Violet');
+                    }
+
+                </script>
+            </div>
+        </aside>
+        <section>
+            <div class="name">
+                <h1 id="main_heading">Molleti Hareesh</h1>
+                <div>Software Developer</div>
+            </div>
+            <div class="exp">
+                <h3 id="work_exp">WORK EXPERIENCE</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="position" id="work_exp2">Technical Executive</div>
+                            <div class="company">MATRIX SECURITY <span class="duration">Dec 2018 - Sep 2019</span></div>
+                            <div class="data">
+                                Ground duty work under APSFL AP Police CCTV Survillence Department.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="position" id="work_exp1">Machine Operator cun Incharge</div>
+                            <div class="company">FAURECIA INTERIOR SYSTEMS <span class="duration">Oct 2017 - Oct
+                                    2018</span></div>
+                            <div class="data">
+                                Learn Machine operations on injection mounding systems for various car interior parts.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education">
+                <h3 id="education_qualification">EDUCATION QUALIFICATIOM</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="position" id="graduation">B.Tech</div>
+                            <div class="company">IAITC <span class="duration"> 2014 - 2017</span></div>
+                        </li>
+                        <li>
+                            <div class="position" id="under_graduation">Diploma</div>
+                            <div class="company">Sujana College of Polytecnic <span class="duration"> 2011 - 2014</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="position" id="matric">SSC</div>
+                            <div class="company">St Peter's High School <span class="duration"> 2010 - 2011</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
