@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>AGE Calculator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <script>
+
+            function ageCalc() {
+                //collect input from HTML form and convert into date format
+                var user_input = document.getElementById("date").value;
+                var my_event_date = new Date(user_input);
+                var my_event = document.getElementById("my_event").value;
+                
+                //check user provide input or not
+                if(user_input==null || user_input==''){
+                  document.getElementById("message").innerHTML = "**Choose a date please!";  
+                  return false; 
+                } 
+                
+                //execute if user entered a date 
+                else {
+                //extract and collect only date from date-time string
+                var my_date = user_input.toString();
+                var my_event_Year = parseInt(my_date.substring(0,4), 10);
+                var my_event_Month = parseInt(my_date.substring(5,7), 10);
+                var my_event_Date = parseInt(my_date.substring(8,10), 10);
+                
+                //get the current date from system
+                var today = new Date();
+                //date string after broking
+                var my_event_day = new Date(my_event_Year, my_event_Month-1, my_event_Date);
+                
+                //calculate the difference of dates
+                var diffInMillisecond = today.valueOf() - my_event_day.valueOf();
+            
+                //convert the difference in milliseconds and store in day and year variable        
+                var year_age = Math.floor(diffInMillisecond / 31536000000);
+                var day_age = Math.floor((diffInMillisecond % 31536000000) / 86400000);
+            
+                //when birth date and month is same as today's date      
+                if ((today.getMonth() == my_event_day.getMonth()) && (today.getDate() == my_event_day.getDate())) {
+                        alert("Happy "+my_event);
+                    }
+                    
+                 var month_age = Math.floor(day_age/30);        
+                 day_age = day_age % 30;
+                    
+                 var tMnt= (month_age + (year_age*12));
+                 var tDays =(tMnt*30) + day_age;
+                 
+                //DOB is greater than today?s date, generate an error: Invalid date  
+                 if (my_event_date>today) {
+                    document.getElementById("result").innerHTML = ("Invalid date input - Please try again!");
+                  }
+                  else {
+                    document.getElementById("result").innerHTML = year_age + " years " + month_age + " months " + day_age + " days"
+                  }
+               }
+            }
+            </script>
+            
+    </head>
+    <body>
+        <div class="container">
+            <div class="text-success h2 text-center">Find Your Time Consumed Today</div>
+            <div class="form-group text-center">
+                <b>
+                    Enter a Date : 
+                    <input type="date" id="date">
+                    <span id="message"></span>
+                </b>
+            </div>
+            <div class="form-group text-center">
+                <b>
+                    Type of Event : 
+                    <select id="my_event">
+                        <option value="Birth Day">Birth Day</option>
+                        <option value="Marriage Anniversary">Marriage Day </option>
+                        <option value="To Join">Joining Day</option>
+                    </select>
+                </b>
+            </div>
+            <div class="text-center">
+                <button type="submit" onclick = "ageCalc()"> Calculate age </button>
+            </div>
+            <h3 style="color:#008CBA" id="result" align="center"></h3> 
+        </div>
+    </body>
+</html>

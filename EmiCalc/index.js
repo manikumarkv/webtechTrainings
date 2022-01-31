@@ -70,3 +70,7 @@ function getByTag(params) {
 }
 
 
+function name(params) {
+    var resp = http.post('https"//api.xyz.com/users', {name:'mani'})
+}
+
