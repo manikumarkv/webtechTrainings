@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>bootstrap page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: blueviolet;">
+        <div class="container" style="border: 15px solid rgb(15, 128, 0);margin-left: 10%;flex-wrap: wrap;">
+            <h1 style="text-align: center;">EMPLOYEE DETAILS</h1>
+            <form action="">
+                <div style="width: 60%;display: flex;">
+                    <div class="form-group">
+                        <label for="fn"><b>First name:</b></label>
+                        <input type="text" class="form-control" name="first name" id="fn"  placeholder="enter name">
+                     </div>                       
+                     <div class="form-group" style="margin-left: 60%;" >
+                        <label for="ln"><b>last name:</b></label>
+                        <input type="text" class="form-control" name="first name" id="ln"  placeholder="enter name">
+                     </div>
+                 </div> 
+                 <div class="form-group" style="width: 40%;">
+                    <label for="gm"><b>Gmail:</b></label>
+                    <input type="gmail" class="form-control" name="gmail" id="gm"  placeholder="enter your gmail">
+                 </div>
+                 <div class="form-group" style="width: 40%;">
+                    <label for="pwd"><b>Password:</b></label>
+                    <input type="password" class="form-control" name="gmail" id="pwd"  placeholder="enter your password">
+                 </div>
+                 <div class="form-group" style="width: 40%;">
+                    <label for="pwd"><b>Phone number:</b></label>
+                    <input type="tel" class="form-control" name="phone " id="pwd"  placeholder="enter your phone number">
+                 </div>
+                 <div class="form-group" style="width: 40%;">
+                    <label for="dob"><b>Date of Birth:</b></label>
+                    <input type="text" class="form-control" name="date of Birth" id="dob"  placeholder="enter your Dob">
+                 </div>
+                 <div class="form-group">
+                    <label><b>Gender:</b><label>
+                        <input type="radio" required/>male
+                        <input type="radio" required/>female
+                        <input type="radio" required/>others
+                    </div>
+                    <div class="form-group" >
+                        <label><b>Address</b></label><br>
+                        <input type="text" class="form-control" style="width: 200px; height: 100px;" placeholder="enter your address">    
+                    </div>
+                     <div>
+                         <input type="submit" class="btn-primary" value="previous">
+                        <input type="reset" class="btn-info"  value="reset">
+                        <input type="submit" class="btn-success" value="login">
+                    </div>         
+                 
+                 
+            </form>
+        </div>
+    </body>
+</html>
