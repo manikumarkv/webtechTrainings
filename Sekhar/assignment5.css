@@ -1,0 +1,93 @@
+.simple
+{
+    width: 25%;
+    color: black;
+    height:100px;
+    margin-left: 3%;
+    margin-right: 1%;
+    margin-top: 2%;
+    border-radius: 30px;
+    font-size: 30px;
+    border-color:   tomato;
+}
+.single
+{
+    width: 98%;
+    color: black;
+    height: 65px;
+    margin-top: 2%;
+    margin-left: 1%;
+    border-radius: 30px;
+    font-size: 30px;
+}
+.log
+{
+    border: 5px solid black;
+    width: 38%;
+    height: 85%;
+    background-color: #101111;
+    margin-top: 7%;
+    margin-left: 30%;
+}
+
+.slam
+{
+    width: 30%;
+    color: black;
+    height: 65px;
+    margin-top: 2%;
+    margin-left: 1%;
+    border-radius: 30px;
+    font-size: 30px;
+    border-color: tomato;
+}
+.image
+{
+    height: 15%;
+    width: 15%;
+    padding-top: 4%;
+    margin-left: 50%;
+    border-radius: 20px solid black;
+}
+.shan
+{
+    box-shadow: 0 0 30px whitesmoke;
+}
+.slim
+{
+    color: rgb(22, 5, 3);
+}
+
+
+
+
+// <form name="cal">
+<div>
+    <input type="number" name="ing" placeholder="enter a value" id="display" class="single">
+</div>
+<div style="display: flex;">
+    <input type="button"  value="1" class="simple btn-lite" onclick="cal.ing.value +='1' ">
+    <input type="button"  value="2" class="simple btn-lite" onclick= "cal.ing.value +='2' ">
+    <input type="button"  value="3" class="simple btn-lite" onclick= "cal.ing.value +='3' ">
+    <input type="button"  value="+" class="simple btn-lite" onclick="cal.ing.value +=' + ' ">
+</div>
+<div style="display: flex;">
+    <input type="button"  value="4" class="simple btn-lite" onclick="cal.ing.value +='4' ">
+    <input type="button"  value="5" class="simple btn-lite" onclick="cal.ing.value +='5' ">
+    <input type="button"  value="6" class="simple btn-lite" onclick="cal.ing.value +='6' " >
+    <input type="button"  value="-" class="simple btn-lite" onclick="cal.ing.value +=' - ' ">
+</div>
+<div style="display: flex;">
+    <input type="button"  value="7" class="simple btn-lite" onclick="cal.ing.value +='7' ">
+    <input type="button"  value="8"class="simple btn-lite" onclick="cal.ing.value +='8' ">
+    <input type="button"  value="9" class="simple btn-lite" onclick="cal.ing.value +='9' ">
+    <input type="button"   value="*" class="simple btn-lite" onclick="cal.ing.value +=' * ' ">
+</div>
+<div style="display: flex;">
+    <input type="button"  value="/"  class="simple btn-lite" onclick="cal.ing.value +=' / ' ">
+    <input type="button"  value="0"class="simple btn-lite" onclick="cal.ing.value +='0' ">
+    <input type="button"  value="." class="simple btn-lite" onclick="cal.ing.value +=' . ' ">
+    <input type="button"   value="=" class="simple btn-success" onclick="cal.ing.value=eval(cal.ing.value)">
+</div>
+<div><input type="submit" value="clear" class="single btn-danger" onclick="cal.ing.value =' '  "></div>
+</form>

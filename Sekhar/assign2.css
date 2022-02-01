@@ -1,0 +1,51 @@
+.sim
+{
+    height: 100%;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 30%;
+    margin-top: 3% ;
+}
+.simple
+{
+   font-size: 40px;
+   padding-top: 10%;
+   color: blue;
+
+}
+.simple1
+{
+   font-size: 25px;
+   margin-left: 5%;
+   color: black;
+}
+.text
+{
+    text-align: justify;
+}
+.sun
+{
+    color:#ff0bd6;
+    font-size: 20px;
+}
+.sun1
+{
+    color:black;
+    
+}
+.save
+{
+    color: solid blue;
+}
+.try
+{
+    text-decoration: none;
+}
+.sum
+{
+    border-style: dotted;
+    width: 90%;
+}
+h1{
+    font-size: 25px;
+}
