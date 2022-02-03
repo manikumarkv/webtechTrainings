@@ -55,9 +55,7 @@
                     <tr>
                         <td> <input type="number" name="c" id="third" placeholder="Enter rate of interest(%)"/> </td>
                     </tr>
-                    <tr>
-                        <td> <input type="number" name="d" id="mon" placeholder="months "/> </td>
-                    </tr>
+                   
                     <tr>
                     <td> <button onclick = "emi()" id="submit">Submit</button> </td>
                     </tr>
@@ -72,7 +70,7 @@
         <script type="text/javascript">
         function emi();
         {
-        var p,t,r,si,ci,mon,emi;
+        var p,t,r,si,ci,emi;
         p = document.getElementById ("first").value;
         t = document.getElementById ("second").value;
         r = document.getElementById ("third").value;
@@ -80,7 +78,7 @@
         si = parseInt((p*t*r)/100 );
         amount = p*Math.pow((1 +r/100),t );
         ci = amount-p;
-        emi= amount/mon;
+        emi= amount/t;
         document.getElementById ('num').innerHTML ="Simple interest : "+si;
         document.getElementById ('num1').innerHTML ="total amount : "+amount;
         document.getElementById ('num2').innerHTML ="emi : "+emi;
