@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" href="css/cal.css">
+    </head>
+    <body>
+        <div>
+            <marquee behavior="scroll " direction="left">my calculator</marquee>
+            <div class="container" style="background-image: url('images/abstract-blue-light-and-bokeh-glowing-background-vector-10096922\ -\ Copy.jpg');">
+                <div class="calculator" >
+                    <input type="text" placeholder="0" id="output-screen" >
+                    <button onclick="display('/')">/</button>
+                    <button onclick="display('*')">*</button>
+                    <button onclick="display('+')">+</button>
+                    <button onclick="display('-')">-</button>
+                    <button onclick="ac()">cl</button>
+                    <button onclick="display('1')">1</button>
+                    <button onclick="display('2')">2</button>
+                    <button onclick="display('3')">3</button>
+                    <button onclick="per()" id="per">%</button>
+                    <button onclick="del()">del</button>
+                    <button onclick="display('4')">4</button>
+                    <button onclick="display('5')">5</button>
+                    <button onclick="display('6')">6</button>
+                    <a href="Sici.html" ><button class="si">emi</button></a>
+                  
+                    <button onclick="display('7')">7</button>
+                    <button onclick="display('8')">8</button>
+                    <button onclick="display('9')">9</button>
+                    <button onclick="display('0')">0</button>
+                    <button onclick="calculate()">=</button>
+                    
+                    
+
+                </div>                
+            </div>
+        </div>
+        <script>
+            let outputscreen= document.getElementById("output-screen");
+
+            function display(num){
+                outputscreen.value += num;
+
+            }
+            function ac()
+            {
+               outputscreen.value = "";
+            }
+            function calculate(){
+                try{
+                    outputscreen.value = eval(outputscreen.value);
+                }
+                catch(err){
+                    alert("inviled")
+                }
+            }
+           
+            function del(){
+                    outputscreen.value= outputscreen.value.slice(0,-1);             
+            }
+            function per(){
+                var p ,m;
+                m=outputscreen.value;
+                p=m/100
+                outputscreen.value  = p;
+                
+            }
+           
+
+        </script>
+    </body>
+</html>

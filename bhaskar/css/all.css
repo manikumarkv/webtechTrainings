@@ -1,0 +1,38 @@
+*{
+    background-color: rgba(151, 218, 245, 0.753);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.con{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    
+}
+table{
+    padding: 0.5px;
+}
+
+img{
+    margin-left: 500px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    
+}
+h1{
+    font-family: Copperplate, Papyrus, fantasy;
+    margin-top: 140px;
+    
+}
+h3{
+    font-family: Copperplate, Papyrus, fantasy;
+    margin-top: -21px;
+    margin-left: 150px;
+}

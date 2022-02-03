@@ -1,0 +1,92 @@
+<html>
+    <head>   
+        <title>si and ci </title>
+        <style>
+            .container{
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+               
+            }
+            .si{
+                background-color: #c6d5f0af;
+                padding: 15px;
+                border-radius: 30px;
+                box-shadow: inset 5px 5px 12px #ffffff,
+                                    5px 5px 12px rgba(0,0,0,16);
+                display: grid;
+                grid-template-columns: repeat(5,70px);
+            }
+            input{
+                background-color: #c6d5f0af;
+                padding: 15px;
+                border-radius: 30px;
+                box-shadow: inset 5px 5px 12px #ffffff,
+                                    5px 5px 12px rgba(0,0,0,16);
+                display: grid;
+                grid-template-columns: repeat(10,70px);
+
+            }
+            #submit{
+                background-color: #c6d5f0af;
+                padding: 15px;
+                border-radius: 30px;
+                box-shadow: inset 5px 5px 12px #ffffff,
+                                    5px 5px 12px rgba(0,0,0,16);
+                display: grid;
+            }
+            
+
+            
+        </style>
+    </head>
+    <body>
+        <div>
+        <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="si">
+                <table>
+                    <tr>
+                    <td> <input type="number" name="a" id="first" placeholder="Enter principal"/> </td>
+                    </tr>
+                    <tr>
+                    <td> <input type="number" name="b" id="second" placeholder="Enter time period "/> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="number" name="c" id="third" placeholder="Enter rate of interest(%)"/> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="number" name="d" id="mon" placeholder="months "/> </td>
+                    </tr>
+                    <tr>
+                    <td> <button onclick = "emi()" id="submit">Submit</button> </td>
+                    </tr>
+                </table>
+            </div>
+             </div>  
+            <div id="num" style="text-align: center;"></div>
+            <div id="num1" style="text-align: center;"></div>
+            <div id="num2" style="text-align: center;"></div>
+            
+        </div>
+        <script type="text/javascript">
+        function emi();
+        {
+        var p,t,r,si,ci,mon,emi;
+        p = document.getElementById ("first").value;
+        t = document.getElementById ("second").value;
+        r = document.getElementById ("third").value;
+        mon = document.getElementById ("mon").value;
+        si = parseInt((p*t*r)/100 );
+        amount = p*Math.pow((1 +r/100),t );
+        ci = amount-p;
+        emi= amount/mon;
+        document.getElementById ('num').innerHTML ="Simple interest : "+si;
+        document.getElementById ('num1').innerHTML ="total amount : "+amount;
+        document.getElementById ('num2').innerHTML ="emi : "+emi;
+
+
+        }
+        </script>
+    </body>
+</html>
