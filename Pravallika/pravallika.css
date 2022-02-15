@@ -1,0 +1,40 @@
+.header
+{
+    height:30%;
+  text-align: center;
+    background-color: aqua;
+    border:2px solid black;
+    
+}
+.footer
+{
+    height:20%;
+    text-align: center;
+    background-color: aqua;
+    border:2px solid black;
+
+}
+.sidebar
+{
+    height:400px;
+    width:15%;
+    border:2px solid black;
+    float:left;
+    color:black;
+    
+}
+.container
+{
+    height: 400px;
+   color: black;
+    border:2px solid black;
+   
+}
+.slam
+{
+    margin-left: 45%;
+    margin-top: 2%;
+    font-size: 25px;
+    
+}
+
